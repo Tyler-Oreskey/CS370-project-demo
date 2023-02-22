@@ -12,7 +12,7 @@ module.exports = {
         return result;
     },
 
-    create: async (name, upc_code) => {
+    create: (name, upc_code) => {
         const result = knex
             .returning('id')
             .insert({ name: name, upc_code: upc_code })
