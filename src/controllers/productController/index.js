@@ -3,8 +3,9 @@ const { productModel } = require('../../models');
 module.exports = {
     getByUPCCode: async (req, res, next) => {
         try {
+            console.log(req.params);
             const result = await productModel.getByUPCCode(req.params.upc_code);
-
+            
             if (result.length === 0) {
                 return res.status(404).json("No data");
             }

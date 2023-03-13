@@ -9,6 +9,7 @@ module.exports = {
             user: process.env.DATABASE_USER || 'postgres',
             password: process.env.DATABASE_PASSWORD || null,
             database: process.env.DATABASE_PATH || 'postgres',
-        }
-    }
+        },
+        searchPath: process.env.SCHEMA || 'public'
+    },
 }

@@ -8,7 +8,7 @@ module.exports = {
             .select('*')
             .from(tablename)
             .where('upc_code', upc_code);
-        
+
         return result;
     },
 
